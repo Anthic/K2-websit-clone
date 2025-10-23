@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@font-face {
+  font-family: font1;
+  src: url(../src/assets/fonts/Lausanne.otf);
+}
