@@ -27,10 +27,15 @@ const Agents = () => {
     gsap.to(imagedevRef.current, {
       scrollTrigger: {
         trigger: imagedevRef.current,
-       
+
         start: "top 11%",
         end: "top -100%",
-        scrub: true,
+        scrub: 1,
+        pinSpacing: true,
+        pinReparent: true,
+        pinType: "transform",
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
         pin: true,
         onUpdate: (elem) => {
           let imageIndex = Math.floor(elem.progress * (imageArray.length - 1));
@@ -41,7 +46,7 @@ const Agents = () => {
   });
   return (
     <div>
-      <div className="section1">
+      <div className="section1 py-1">
         <div
           ref={imagedevRef}
           className="absolute overflow-hidden h-[20vw] w-[15vw]  top-[5vw]  left-[30vw] rounded-4xl "
@@ -61,7 +66,7 @@ const Agents = () => {
             </h1>
           </div>
 
-          <div className="pl-[40%] mt-8">
+          <div className="pl-[20%] mt-8">
             <p className="text-xl ">
               {" "}
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our curiosity fuels our
