@@ -3,3 +3,15 @@
   font-family: font1;
   src: url(../src/assets/fonts/Lausanne.otf);
 }
+
+.moveX{
+  animation-name: moveAnimation;
+}
+@keyframes moveAnimation {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
