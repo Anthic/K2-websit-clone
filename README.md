@@ -1,16 +1,51 @@
-# React + Vite
+# K2 Website Clone - Creative Agency Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A stunning, high-performance creative agency website clone built with React, GSAP animations, and modern web technologies. Features immersive fullscreen navigation, smooth page transitions, and responsive design.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=flat-square&logo=react)
+![GSAP](https://img.shields.io/badge/GSAP-3.13.0-88CE02?style=flat-square&logo=greensock)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.14-38B2AC?style=flat-square&logo=tailwind-css)
+![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?style=flat-square&logo=vite)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Advanced GSAP Animations** - Smooth stair transitions, text reveals, and scroll-triggered effects
+- **Fullscreen Navigation** - Immersive menu with animated hover effects
+- **Fully Responsive** - Optimized for mobile, tablet, and desktop devices
+- **Fast Performance** - Built with Vite for lightning-fast HMR and builds
+- **Modern UI/UX** - Clean design with custom fonts and brand colors
+- **React Router** - Smooth client-side routing between pages
+- **Project Gallery** - Scroll-triggered animations for project showcase
+- **Team Section** - Interactive agency team display with scroll animations
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+### Frontend
+- **React 19.1.1** - Modern React with hooks
+- **React Router DOM 7.9.4** - Client-side routing
+- **GSAP 3.13.0** - Professional-grade animations
+- **@gsap/react** - React integration for GSAP
+
+### Styling
+- **Tailwind CSS 4.1.14** - Utility-first CSS framework
+- **Custom CSS** - Additional animations and styles
+
+### Build Tools
+- **Vite 7.1.7** - Next-generation frontend tooling
+- **ESLint** - Code quality and consistency
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+
+
