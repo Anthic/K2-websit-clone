@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { useLocation } from "react-router-dom";
+import React, { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { useLocation } from 'react-router-dom';
 const Stairs = (props) => {
   const currentLocation = useLocation().pathname;
   const starParentRef = useRef(null);
@@ -11,25 +11,25 @@ const Stairs = (props) => {
       const tl = gsap.timeline();
 
       tl.to(starParentRef.current, {
-        display: "block",
+        display: 'block',
       });
-      tl.from(".stair", {
+      tl.from('.stair', {
         height: 0,
         stagger: {
           amount: -0.25,
         },
       });
-      tl.to(".stair", {
-        y: "100%",
+      tl.to('.stair', {
+        y: '100%',
         stagger: {
           amount: -0.25,
         },
       });
       tl.to(starParentRef.current, {
-        display: "none",
+        display: 'none',
       });
-      tl.to(".stair", {
-        y: "0%",
+      tl.to('.stair', {
+        y: '0%',
       });
       gsap.from(pageRef.current, {
         opacity: 0,

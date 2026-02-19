@@ -46,15 +46,15 @@ function FullScreenNav() {
           amount: 0.3,
         },
       }
-    ) /
-      tl.to(
-        '.navlink',
-        {
-          opacity: 1,
-          duration: 0.5,
-        },
-        '-=0.5'
-      );
+    );
+    tl.to(
+      '.navlink',
+      {
+        opacity: 1,
+        duration: 0.5,
+      },
+      '-=0.5'
+    );
   }
 
   function gsapAnimationReverse() {
@@ -295,9 +295,15 @@ function FullScreenNav() {
           </div>
 
           <div className="link flex-1 relative border-y-[1px] border-white w-full overflow-hidden flex items-center justify-center opacity-0">
-            <h1 className="font-[font2] text-4xl lg:text-[7vw] text-center uppercase tracking-tight">
-              Blogs
-            </h1>
+            <Link
+              to="/blog"
+              onClick={() => {
+                setNavOpen(false);
+              }}
+              className="font-[font2] text-4xl lg:text-[7vw] text-center uppercase tracking-tight"
+            >
+              Blog
+            </Link>
             <div className="moveLink absolute text-black flex items-center top-0 left-0 w-full h-full bg-[#D3FD50]">
               <div className="moveX flex items-center">
                 <h2 className="whitespace-nowrap font-[font2] lg:text-[7vw] text-2xl text-center uppercase px-4">

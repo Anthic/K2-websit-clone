@@ -1,4 +1,4 @@
-import React from "react";
+
 import Video from "../components/Home/Video";
 import HomeHeroUpperText from "../components/Home/HomeHeroUpperText";
 import HomeHeroDownText from "../components/Home/HomeHeroDownText";

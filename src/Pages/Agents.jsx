@@ -1,26 +1,26 @@
-import React, { useRef } from "react";
-import AgencyImageOne from "../assets/agencesImageOne.jpg";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import React, { useRef } from 'react';
+import AgencyImageOne from '../assets/agencesImageOne.jpg';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 const Agents = () => {
   const imagedevRef = useRef(null);
   const imageRef = useRef(null);
   const imageArray = [
-    "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/Lawrence_480x640-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/SophieA_480x640-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/Claire_480x640-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/Michele_480X640-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/MEL_480X640-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/CAMILLE_480X640_2-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/MAXIME_480X640_2-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/MEGGIE_480X640_2-480x640.jpg",
-    "https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg",
+    'https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/Lawrence_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/SophieA_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/Claire_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/Michele_480X640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/MEL_480X640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/CAMILLE_480X640_2-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/MAXIME_480X640_2-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/MEGGIE_480X640_2-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg',
   ];
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(function () {
@@ -28,17 +28,22 @@ const Agents = () => {
       scrollTrigger: {
         trigger: imagedevRef.current,
 
-        start: "top 11%",
-        end: "top -100%",
+        start: 'top 11%',
+        end: 'top -100%',
         scrub: 1,
         pinSpacing: true,
         pinReparent: true,
-        pinType: "transform",
+        pinType: 'transform',
         anticipatePin: 1,
         invalidateOnRefresh: true,
         pin: true,
         onUpdate: (elem) => {
-          let imageIndex = Math.floor(elem.progress * (imageArray.length - 1));
+          const totalImage = imageArray.length;
+          const segment = 1 / totalImage;
+          let imageIndex = Math.min(
+            totalImage - 1,
+            Math.floor(elem.progress / segment)
+          );
           imageRef.current.src = imageArray[imageIndex];
         },
       },
@@ -68,7 +73,7 @@ const Agents = () => {
 
           <div className="pl-[20%] mt-8">
             <p className="text-xl ">
-              {" "}
+              {' '}
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our curiosity fuels our
               creativity. We remain humble and say no to big egos, even yours. A
               brand is alive. It has values, a personality, a story. If we
